@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -tF | grep -v / 
+ls -tF | grep -v / | head -n 10
