@@ -1,0 +1,2 @@
+#!/bin/bsah
+cat list | sort | uniq -u

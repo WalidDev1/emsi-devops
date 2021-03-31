@@ -22,7 +22,7 @@ Host *
 #   ForwardX11Trusted yes                                                                                                                                                                       
 #   RhostsRSAAuthentication no                                                                                                                                                                  
 #   RSAAuthentication yes                                                                                                                                                                       
-PubkeyAuthentication yes                                                                                                                                                                        
+    PubkeyAuthentication yes                                                                                                                                                                        
     PasswordAuthentication no                                                                                                                                                                   
 #   HostbasedAuthentication no                                                                                                                                                                  
 #   GSSAPIAuthentication no                                                                                                                                                                     

@@ -1,0 +1,15 @@
+total 96
+drwxr-xr-x  14 admin  staff   448 Mar 26 23:58 .
+drwxr-xr-x@  7 admin  staff   224 Mar 23 00:54 ..
+-rw-r--r--@  1 admin  staff  6148 Mar 27 13:33 .DS_Store
+-rwxr-xr-x   1 admin  staff    33 Mar 27 01:42 0-hello_world
+-rwxr-xr-x   1 admin  staff    29 Mar 27 01:41 1-confused_smiley
+-rwxr-xr-x   1 admin  staff    29 Mar 27 01:39 2-hellofile
+-rwxr-xr-x   1 admin  staff    39 Mar 27 01:43 3-twofiles
+-rwxr-xr-x   1 admin  staff    33 Mar 27 01:46 4-lastlines
+-rwxr-xr-x   1 admin  staff    32 Mar 27 01:48 5-firstlines
+-rwxr-xr-x   1 admin  staff    41 Mar 27 02:11 6-third_line
+-rwxr-xr-x   1 admin  staff   102 Mar 27 02:49 7-file
+-rwxr-xr-x   1 admin  staff    42 Mar 27 14:14 8-cwd_state
+-rw-r--r--   1 admin  staff    17 Mar 27 02:49 \*\\'"Holberton School"\'\\*$\?\*\*\*\*\*:)
+-rw-r--r--@  1 admin  staff     0 Mar 27 14:20 ls_cwd_content
