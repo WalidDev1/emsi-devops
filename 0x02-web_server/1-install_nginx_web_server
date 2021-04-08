@@ -4,10 +4,22 @@
 # 	   curl http://35.229.54.225/   --> returns string "Holberton School"
 #	   curl http://35.229.54.225/   --> returns header info
 
-sudo apt-get -y update
-sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
-sudo chown -R "$USER":"$USER" /var/www/html/index.nginx-debian.html
-sudo chmod -R 755 /var/www
-sudo echo "Holberton School" > /var/www/html/index.nginx-debian.html
-sudo service nginx start
+sudo apt-get update -y
+sudo apt-get install nginx -y
+sudo chown -R ubuntu:ubuntu /var/www/
+sudo chown -R ubuntu:ubuntu /etc/nginx
+if [ -f /var/www/html/index.nginx-debian.html ]; then
+sudo echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
+fi
+if [ -f /usr/share/nginx/html/index.html ]; then
+sudo echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+fi
+if [ -f /etc/nginx/sites-enabled/default ]; then
+    sed -i -E 's/listen [0-9]+ default_server/listen 80 default_server/g' /etc/nginx/sites-enabled/default
+    sed -i -E 's/listen \[::\]:[0-9]+ default_server/listen [::]:80 default_server/g' /etc/nginx/sites-enabled/default
+fi
+if [ -f /etc/nginx/nginx.conf ]; then
+    sed -i -E 's/listen [0-9]+ default_server/listen 80 default_server/g' /etc/nginx/nginx.conf
+    sed -i -E 's/listen \[::\]:[0-9]+ default_server/listen [::]:80 default_server/g' /etc/nginx/nginx.conf
+fi
+sudo /etc/init.d/nginx start
