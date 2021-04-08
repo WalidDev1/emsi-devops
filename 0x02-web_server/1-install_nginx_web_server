@@ -4,7 +4,10 @@
 # 	   curl http://35.229.54.225/   --> returns string "Holberton School"
 #	   curl http://35.229.54.225/   --> returns header info
 
-sudo apt-get -y update
+sudo apt-get update
 sudo apt-get -y install nginx
-echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
-sudo service nginx start
+sudo ufw allow 'Nginx HTTP'
+sudo chown -R "$USER":"$USER" /var/www/html/index.nginx-debian.html
+sudo chmod -R 755 /var/www
+sudo echo "Holberton School" > /var/www/html/index.nginx-debian.html
+sudo service nginx restart
