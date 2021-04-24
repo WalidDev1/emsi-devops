@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Bash script for Make it sweet and short
-sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-service nginx restart
-pkill -o nginx
+sudo apt-get install -y apache2
+sudo cp /usr/share/nginx/html/index.html /var/www/html/index.html
+sudo service apache2 start
