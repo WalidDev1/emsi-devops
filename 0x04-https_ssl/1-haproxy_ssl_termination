@@ -37,7 +37,7 @@ defaults
         option http-server-close
 frontend www-http
     bind   *:443
-    reqadd X-Forwarded-Proto:\ https
+    reqadd X-Forwarded-Proto:\ http
     default_backend www-backend
     
 frontend www-https
