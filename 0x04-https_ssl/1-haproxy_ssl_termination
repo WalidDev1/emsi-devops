@@ -44,11 +44,11 @@ frontend www-https
     use_backend letsencrypt-backend if letsencrypt-acl
     default_backend www-backend
 
-backend web-backend
+backend www-backend
     balance roundrobin
     redirect scheme https if !{ ssl_fc }
-    server 1863-web-01 35.196.138.224:80 check
-    server 1863-web-02 35.190.138.77:80 check
+    server 3130-web-01 34.73.17.46:80 check
+    server 3130-web-02 35.190.138.77:80 check
 
 backend letsencrypt-backend
     server letsencrypt 127.0.0.1:54321
